@@ -1,0 +1,1 @@
+python -i path/to/file

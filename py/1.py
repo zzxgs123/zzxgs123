@@ -1,3 +1,3 @@
-import numpy
-In[3]:np.array([1,2,3])
-Out[3]:array([1,2,3])
+from numpy import *
+randMat=mat(random.rand(4,4))
+randMat.I
