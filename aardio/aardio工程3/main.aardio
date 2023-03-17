@@ -1,0 +1,268 @@
+import win.ui;
+import win.ui.menu;
+/*DSG{{*/
+mainForm = win.form(text="崩铁计算器";right=757;bottom=467)
+mainForm.add(
+atk={cls="edit";text="100";left=24;top=40;right=84;bottom=70;edge=1;multiline=1;num=1;z=14};
+bao={cls="edit";left=184;top=376;right=244;bottom=406;edge=1;multiline=1;z=25};
+baoji={cls="edit";text="5";left=24;top=112;right=84;bottom=142;edge=1;multiline=1;z=18};
+baoshang={cls="edit";text="50";left=104;top=112;right=164;bottom=142;edge=1;multiline=1;z=19};
+button2={cls="button";text="基础系数";left=376;top=88;right=440;bottom=104;z=56};
+chae={cls="edit";text="10";left=456;top=176;right=516;bottom=206;edge=1;multiline=1;z=53};
+difangsudu={cls="edit";left=544;top=176;right=604;bottom=206;edge=1;multiline=1;z=49};
+fang={cls="edit";text="0.5";left=184;top=232;right=244;bottom=262;edge=1;multiline=1;z=17};
+gongji={cls="edit";left=104;top=40;right=164;bottom=70;edge=1;multiline=1;z=15};
+guaiwu={cls="edit";text="80";left=104;top=232;right=164;bottom=262;edge=1;multiline=1;z=33};
+jianshang={cls="edit";text="10";left=184;top=176;right=244;bottom=206;edge=1;multiline=1;z=22};
+jichu={cls="edit";left=24;top=376;right=84;bottom=406;edge=1;multiline=1;z=23};
+jiposhang={cls="edit";left=640;top=112;right=700;bottom=142;edge=1;multiline=1;z=39};
+jiposhuxing={cls="edit";text="1";left=664;top=40;right=724;bottom=70;edge=1;z=42};
+jipotexiao={cls="edit";left=456;top=112;right=516;bottom=142;edge=1;multiline=1;z=38};
+juese={cls="edit";text="80";left=24;top=232;right=84;bottom=262;edge=1;multiline=1;num=1;z=32};
+kang={cls="edit";text="10";left=24;top=304;right=84;bottom=334;edge=1;multiline=1;z=35};
+lun={cls="edit";left=856;top=168;right=916;bottom=198;edge=1;hide=1;multiline=1;z=54};
+mianbangongji={cls="edit";text="100";left=264;top=40;right=324;bottom=70;edge=1;multiline=1;z=27};
+plus={cls="plus";left=288;top=-128;right=368;bottom=522;ah=1;aw=1;background="\res\b03a519e0613beaf0c74b6f699e1f0a7_8745939411174792919.jpg";hide=1;z=2};
+qiwang={cls="edit";left=104;top=376;right=164;bottom=406;edge=1;multiline=1;z=24};
+renxingtiao={cls="edit";text="1";left=544;top=112;right=604;bottom=142;edge=1;z=45};
+static={cls="static";text="基础攻击力";left=24;top=16;right=93;bottom=39;transparent=1;z=1};
+static10={cls="static";text="暴击率（%）";left=24;top=88;right=97;bottom=111;transparent=1;z=10};
+static11={cls="static";text="暴击伤害（%）";left=104;top=88;right=208;bottom=111;transparent=1;z=11};
+static12={cls="static";text="期望伤害";left=104;top=352;right=163;bottom=375;notify=1;transparent=1;z=12};
+static13={cls="static";text="暴击伤害";left=184;top=352;right=243;bottom=375;notify=1;transparent=1;z=13};
+static14={cls="static";text="数值攻击力";left=184;top=16;right=252;bottom=38;transparent=1;z=28};
+static15={cls="static";text="面板攻击力";left=264;top=16;right=333;bottom=40;transparent=1;z=29};
+static16={cls="static";text="角色等级";left=24;top=208;right=93;bottom=231;transparent=1;z=30};
+static17={cls="static";text="怪物等级";left=104;top=208;right=170;bottom=231;notify=1;transparent=1;z=31};
+static19={cls="static";text="抗性（%）";left=24;top=280;right=107;bottom=303;transparent=1;z=34};
+static2={cls="static";text="增伤（%）";left=24;top=152;right=87;bottom=175;transparent=1;z=3};
+static21={cls="static";text="击破伤害属性";left=664;top=16;right=749;bottom=45;transparent=1;z=41};
+static23={cls="static";text="击破伤害";left=640;top=88;right=708;bottom=108;transparent=1;z=40};
+static24={cls="static";text="冰、量子、虚数：雷：风：火、物理 = 1 : 2 : 3 : 4";left=376;top=40;right=655;bottom=65;transparent=1;z=43};
+static25={cls="static";text="击破特效（%）";left=456;top=88;right=549;bottom=111;notify=1;transparent=1;z=36};
+static26={cls="static";text="韧性条长度";left=544;top=88;right=629;bottom=117;transparent=1;z=44};
+static27={cls="static";text="我方速度";left=376;top=152;right=445;bottom=175;transparent=1;z=46};
+static28={cls="static";text="敌方速度";left=544;top=152;right=637;bottom=175;notify=1;transparent=1;z=47};
+static3={cls="static";text="防御";left=184;top=208;right=230;bottom=231;transparent=1;z=4};
+static30={cls="static";text="速度比";left=792;top=144;right=868;bottom=164;hide=1;transparent=1;z=51};
+static31={cls="static";text="第一轮差额";left=456;top=152;right=541;bottom=181;transparent=1;z=52};
+static32={cls="static";text="轮期望伤害";left=856;top=144;right=924;bottom=164;hide=1;transparent=1;z=55};
+static4={cls="static";text="减伤（%）";left=184;top=152;right=247;bottom=175;transparent=1;z=5};
+static5={cls="static";text="攻击力(%)";left=104;top=16;right=170;bottom=39;notify=1;transparent=1;z=6};
+static6={cls="static";text="易伤（%）";left=104;top=152;right=167;bottom=175;transparent=1;z=7};
+static7={cls="static";text="基础伤害";left=24;top=352;right=83;bottom=375;notify=1;transparent=1;z=8};
+static8={cls="static";text="技能倍率（%）";left=104;top=280;right=201;bottom=307;transparent=1;z=9};
+sudubi={cls="edit";left=784;top=168;right=844;bottom=198;edge=1;hide=1;multiline=1;z=50};
+value={cls="edit";text="100";left=104;top=304;right=164;bottom=334;edge=1;multiline=1;z=16};
+wofangsudu={cls="edit";text="100";left=376;top=176;right=436;bottom=206;edge=1;multiline=1;num=1;z=48};
+xiaogongji={cls="edit";left=184;top=40;right=244;bottom=70;edge=1;multiline=1;z=26};
+xishu={cls="edit";text="4083";left=376;top=112;right=436;bottom=142;edge=1;multiline=1;num=1;z=37};
+yishang={cls="edit";left=104;top=176;right=164;bottom=206;edge=1;multiline=1;z=21};
+zengshang={cls="edit";left=24;top=176;right=84;bottom=206;edge=1;multiline=1;z=20}
+)
+/*}}*/
+
+mainForm.plus.orphanWindow();
+var menuFile = win.ui.popmenu(mainForm);//创建弹出菜单
+menuFile.add(
+	"自由加减数值",
+	function(id){
+		 var newForm = ..win.form(text="aardio New Form";right=700;bottom=400) //创建一个新的窗体
+    newForm.add(
+    atk={cls="edit";left=24;top=40;right=84;bottom=70;edge=1;multiline=1;num=1;z=13};
+bao={cls="edit";left=184;top=376;right=244;bottom=406;edge=1;multiline=1;z=24};
+baoji={cls="edit";left=24;top=112;right=84;bottom=142;edge=1;multiline=1;z=17};
+baoshang={cls="edit";left=104;top=112;right=164;bottom=142;edge=1;multiline=1;z=18};
+button2={cls="button";left=376;top=88;right=440;bottom=104;z=55};
+chae={cls="edit";left=456;top=176;right=516;bottom=206;edge=1;multiline=1;z=52};
+difangsudu={cls="edit";left=544;top=176;right=604;bottom=206;edge=1;multiline=1;z=48};
+fang={cls="edit";left=184;top=232;right=244;bottom=262;edge=1;multiline=1;z=16};
+gongji={cls="edit";left=104;top=40;right=164;bottom=70;edge=1;multiline=1;z=14};
+guaiwu={cls="edit";left=104;top=232;right=164;bottom=262;edge=1;multiline=1;z=32};
+jianshang={cls="edit";left=184;top=176;right=244;bottom=206;edge=1;multiline=1;z=21};
+jichu={cls="edit";left=24;top=376;right=84;bottom=406;edge=1;multiline=1;z=22};
+jiposhang={cls="edit";left=640;top=112;right=700;bottom=142;edge=1;multiline=1;z=38};
+jiposhuxing={cls="edit";left=664;top=40;right=724;bottom=70;edge=1;z=41};
+jipotexiao={cls="edit";left=456;top=112;right=516;bottom=142;edge=1;multiline=1;z=37};
+juese={cls="edit";left=24;top=232;right=84;bottom=262;edge=1;multiline=1;num=1;z=31};
+kang={cls="edit";left=24;top=304;right=84;bottom=334;edge=1;multiline=1;z=34};
+lun={cls="edit";left=856;top=168;right=916;bottom=198;edge=1;hide=1;multiline=1;z=53};
+mianbangongji={cls="edit";left=264;top=40;right=324;bottom=70;edge=1;multiline=1;z=26};
+qiwang={cls="edit";left=104;top=376;right=164;bottom=406;edge=1;multiline=1;z=23};
+renxingtiao={cls="edit";left=544;top=112;right=604;bottom=142;edge=1;z=44};
+static={cls="static";text="基础攻击力";left=24;top=16;right=93;bottom=39;transparent=1;z=1};
+static10={cls="static";text="暴击率（%）";left=24;top=88;right=97;bottom=111;transparent=1;z=9};
+static11={cls="static";text="暴击伤害（%）";left=104;top=88;right=208;bottom=111;transparent=1;z=10};
+static12={cls="static";text="期望伤害";left=104;top=352;right=163;bottom=375;notify=1;transparent=1;z=11};
+static13={cls="static";text="暴击伤害";left=184;top=352;right=243;bottom=375;notify=1;transparent=1;z=12};
+static14={cls="static";text="数值攻击力";left=184;top=16;right=252;bottom=38;transparent=1;z=27};
+static15={cls="static";text="面板攻击力";left=264;top=16;right=333;bottom=40;transparent=1;z=28};
+static16={cls="static";text="角色等级";left=24;top=208;right=93;bottom=231;transparent=1;z=29};
+static17={cls="static";text="怪物等级";left=104;top=208;right=170;bottom=231;notify=1;transparent=1;z=30};
+static19={cls="static";text="抗性（%）";left=24;top=280;right=107;bottom=303;transparent=1;z=33};
+static2={cls="static";text="增伤（%）";left=24;top=152;right=87;bottom=175;transparent=1;z=2};
+static21={cls="static";text="击破伤害属性";left=664;top=16;right=749;bottom=45;transparent=1;z=40};
+static23={cls="static";text="击破伤害";left=640;top=88;right=708;bottom=108;transparent=1;z=39};
+static24={cls="static";text="冰、量子、虚数：雷：风：火、物理 = 1 : 2 : 3 : 4";left=376;top=40;right=655;bottom=65;transparent=1;z=42};
+static25={cls="static";text="击破特效（%）";left=456;top=88;right=549;bottom=111;notify=1;transparent=1;z=35};
+static26={cls="static";text="韧性条长度";left=544;top=88;right=629;bottom=117;transparent=1;z=43};
+static27={cls="static";text="我方速度";left=376;top=152;right=445;bottom=175;transparent=1;z=45};
+static28={cls="static";text="敌方速度";left=544;top=152;right=637;bottom=175;notify=1;transparent=1;z=46};
+static3={cls="static";text="防御";left=184;top=208;right=230;bottom=231;transparent=1;z=3};
+static30={cls="static";text="速度比";left=792;top=144;right=868;bottom=164;hide=1;transparent=1;z=50};
+static31={cls="static";text="第一轮差额";left=456;top=152;right=541;bottom=181;transparent=1;z=51};
+static32={cls="static";text="轮期望伤害";left=856;top=144;right=924;bottom=164;hide=1;transparent=1;z=54};
+static4={cls="static";text="减伤（%）";left=184;top=152;right=247;bottom=175;transparent=1;z=4};
+static5={cls="static";text="攻击力(%)";left=104;top=16;right=170;bottom=39;notify=1;transparent=1;z=5};
+static6={cls="static";text="易伤（%）";left=104;top=152;right=167;bottom=175;transparent=1;z=6};
+static7={cls="static";text="基础伤害";left=24;top=352;right=83;bottom=375;notify=1;transparent=1;z=7};
+static8={cls="static";text="技能倍率（%）";left=104;top=280;right=201;bottom=307;transparent=1;z=8};
+sudubi={cls="edit";left=784;top=168;right=844;bottom=198;edge=1;hide=1;multiline=1;z=49};
+value={cls="edit";left=104;top=304;right=164;bottom=334;edge=1;multiline=1;z=15};
+wofangsudu={cls="edit";left=376;top=176;right=436;bottom=206;edge=1;multiline=1;num=1;z=47};
+xiaogongji={cls="edit";left=184;top=40;right=244;bottom=70;edge=1;multiline=1;z=25};
+xishu={cls="edit";left=376;top=112;right=436;bottom=142;edge=1;multiline=1;num=1;z=36};
+yishang={cls="edit";left=104;top=176;right=164;bottom=206;edge=1;multiline=1;z=20};
+zengshang={cls="edit";left=24;top=176;right=84;bottom=206;edge=1;multiline=1;z=19}
+   
+)
+    newForm.show() //显示新的窗体
+			for(name,ctrl in newForm.eachControl("edit") ){	
+    ctrl.oncommand = function(id,event){
+      
+       
+           
+                try{
+        //如果当前是输入表达式（或数值）状态
+         for(name1,ctrl1 in mainForm.eachControl("edit") ){//遍历 newForm 中的所有 edit 控件
+  
+       
+        if(name==name1){ //如果找到了
+        	 
+        	 
+            //在这里写你想要对 tactrl1.textrget 控件进行的操作，例如：
+            ctrl.value=ctrl.text;
+            ctrl1.text = ctrl1.value+ctrl.value; //将 newForm 中 edit 控件的文本赋值给 mainForm 中同名控件
+             mainForm.fang.text=(mainForm.juese.text*10+200)/(mainForm.juese.text*10+200+mainForm.guaiwu.text*10+200);
+        mainForm.mianbangongji.text=(mainForm.gongji.text/100+1)*mainForm.atk.text+mainForm.xiaogongji.text;
+     mainForm.qiwang.text=(1-mainForm.kang.text/100)*mainForm.fang.text*(mainForm.yishang.text/100+1)*(1-mainForm.jianshang.text/100)*(mainForm.zengshang.text/100+1)*(mainForm.value.text/100)*(mainForm.mianbangongji.text)*(mainForm.baoji.text/100*mainForm.baoshang.text/100+1);
+    mainForm.jichu.text=(1-mainForm.kang.text/100)*mainForm.fang.text*(mainForm.yishang.text/100+1)*(1-mainForm.jianshang.text/100)*(mainForm.zengshang.text/100+1)*(mainForm.value.text/100)*(mainForm.mianbangongji.text);
+    mainForm.bao.text=(1-mainForm.kang.text/100)*mainForm.fang.text*(mainForm.baoshang.text/100+1)*(mainForm.yishang.text/100+1)*(1-mainForm.jianshang.text/100)*(mainForm.zengshang.text/100+1)*(mainForm.value.text/100)*mainForm.mianbangongji.text;
+     mainForm.jiposhang.text=((mainForm.renxingtiao.text+2)/3)*(mainForm.jiposhuxing.text)*(mainForm.xishu.text)*(1-mainForm.jianshang.text/100)*(mainForm.fang.text)*(1-mainForm.kang.text/100)*(mainForm.jipotexiao.text/100+1)*(mainForm.yishang.text/100+1);
+    mainForm.difangsudu.text=10000/(10000/mainForm.wofangsudu.text+mainForm.chae.text);
+    //mainForm.chae.text=-(10000/mainForm.wofangsudu.text-10000/mainForm.difangsudu.text);
+    mainForm.sudubi.text=mainForm.wofangsudu.text/mainForm.difangsudu.text;
+    mainForm.lun.text=mainForm.sudubi.text*mainForm.qiwang.text;
+
+        }
+        
+    
+}
+    
+    
+    }
+     catch(e){
+        
+    }
+    
+    }
+}
+	} 
+) 
+var menuHelp = win.ui.popmenu(mainForm);//创建弹出菜单
+menuHelp.add(
+	"自动填角色数值",
+	function(id){
+			 var jueseForm = ..win.form(text="aardio New Form";right=400;bottom=400) //创建一个新的窗体
+    jueseForm.add(
+    combobox={cls="combobox";left=80;top=32;right=208;bottom=56;edge=1;items={};mode="dropdown";z=1};
+combobox4={cls="combobox";left=80;top=64;right=208;bottom=88;edge=1;items={};mode="dropdown";z=3};
+combobox6={cls="combobox";left=80;top=96;right=208;bottom=120;edge=1;items={};mode="dropdown";z=5};
+edit={cls="edit";text="1";left=264;top=64;right=304;bottom=88;edge=1;z=9};
+edit2={cls="edit";text="1";left=264;top=32;right=304;bottom=56;edge=1;z=7};
+edit3={cls="edit";text="1";left=264;top=96;right=304;bottom=120;edge=1;z=11};
+edit4={cls="edit";text="1";left=360;top=32;right=400;bottom=56;edge=1;z=13};
+edit5={cls="edit";text="1";left=360;top=64;right=400;bottom=88;edge=1;z=15};
+static={cls="static";text="角色";left=32;top=32;right=72;bottom=56;transparent=1;z=2};
+static2={cls="static";text="武器";left=32;top=64;right=72;bottom=88;transparent=1;z=4};
+static3={cls="static";text="等级";left=224;top=64;right=264;bottom=88;notify=1;transparent=1;z=10};
+static4={cls="static";text="技能";left=32;top=96;right=72;bottom=120;transparent=1;z=6};
+static5={cls="static";text="等级";left=224;top=32;right=264;bottom=56;notify=1;transparent=1;z=8};
+static6={cls="static";text="等级";left=224;top=96;right=264;bottom=120;notify=1;transparent=1;z=12};
+static7={cls="static";text="命座";left=320;top=32;right=360;bottom=56;notify=1;transparent=1;z=14};
+static8={cls="static";text="精炼";left=320;top=64;right=360;bottom=88;notify=1;transparent=1;z=16}
+   
+   
+)
+    jueseForm.show() //显示新的窗体
+	} 
+)
+
+var menu = win.ui.menu(mainForm);
+menu.add('数值',menuFile) 
+menu.add('角色',menuHelp) 
+
+for(name,ctrl in mainForm.eachControl("edit") ){
+	ctrl.value=ctrl.text;
+	}
+for(name,ctrl in mainForm.eachControl("edit") ){
+	
+	
+		
+	
+	
+    ctrl.oncommand = function(id,event){
+        try{
+        //如果当前是输入表达式（或数值）状态
+        ctrl.value=ctrl.text;
+        mainForm.fang.text=(mainForm.juese.text*10+200)/(mainForm.juese.text*10+200+mainForm.guaiwu.text*10+200);
+        mainForm.mianbangongji.text=(mainForm.gongji.text/100+1)*mainForm.atk.text+mainForm.xiaogongji.text;
+     mainForm.qiwang.text=(1-mainForm.kang.text/100)*mainForm.fang.text*(mainForm.yishang.text/100+1)*(1-mainForm.jianshang.text/100)*(mainForm.zengshang.text/100+1)*(mainForm.value.text/100)*(mainForm.mianbangongji.text)*(mainForm.baoji.text/100*mainForm.baoshang.text/100+1);
+    mainForm.jichu.text=(1-mainForm.kang.text/100)*mainForm.fang.text*(mainForm.yishang.text/100+1)*(1-mainForm.jianshang.text/100)*(mainForm.zengshang.text/100+1)*(mainForm.value.text/100)*(mainForm.mianbangongji.text);
+    mainForm.bao.text=(1-mainForm.kang.text/100)*mainForm.fang.text*(mainForm.baoshang.text/100+1)*(mainForm.yishang.text/100+1)*(1-mainForm.jianshang.text/100)*(mainForm.zengshang.text/100+1)*(mainForm.value.text/100)*mainForm.mianbangongji.text;
+     mainForm.jiposhang.text=((mainForm.renxingtiao.text+2)/3)*(mainForm.jiposhuxing.text)*(mainForm.xishu.text)*(1-mainForm.jianshang.text/100)*(mainForm.fang.text)*(1-mainForm.kang.text/100)*(mainForm.jipotexiao.text/100+1)*(mainForm.yishang.text/100+1);
+    mainForm.difangsudu.text=10000/(10000/mainForm.wofangsudu.text+mainForm.chae.text);
+    //mainForm.chae.text=-(10000/mainForm.wofangsudu.text-10000/mainForm.difangsudu.text);
+    mainForm.sudubi.text=mainForm.wofangsudu.text/mainForm.difangsudu.text;
+    mainForm.lun.text=mainForm.sudubi.text*mainForm.qiwang.text;
+    
+    
+    }
+     catch(e){
+        
+    }
+    
+    }
+}
+
+
+
+
+var show = 0; 
+mainForm.button2.oncommand = function(id,event){
+	
+	if(show==0){
+		mainForm.plus.show(true);
+		show=1;
+	}
+	else {
+		mainForm.plus.show(false);
+		show=0;
+	}	
+}
+
+/*
+mainForm.button2.oncommand = function(id,event) //定义按钮的点击事件处理函数
+{
+    var newForm = ..win.form(text="aardio New Form";right=40;bottom=650) //创建一个新的窗体
+    newForm.add(
+   
+    plus={cls="plus";left=0;top=0;right=40;bottom=650;ah=1;aw=1;background="~\project\aardio工程3\res\b03a519e0613beaf0c74b6f699e1f0a7_8745939411174792919.jpg";z=2}
+
+)
+    newForm.show() //显示新的窗体
+}
+*/
+
+mainForm.show();
+return win.loopMessage();

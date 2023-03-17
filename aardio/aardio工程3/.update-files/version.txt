@@ -1,0 +1,8 @@
+{
+    "description":"",
+    "format":".lzma",
+    "main":"aardio工程3.exe",
+    "updater":"aardio工程3.exe",
+    "url":"http://update.aardio.com/api/v1",
+    "version":"0.0.0.11"
+}
